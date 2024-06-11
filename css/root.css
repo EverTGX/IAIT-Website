@@ -1,0 +1,56 @@
+:root {
+	--clr-primary-bright: 255, 255, 255;
+	--clr-primary: 200, 200, 200;
+	--clr-primary-dark: 16, 16, 16;
+	--clr-primary-bg: 6, 6, 6;
+
+	--clr-secondary-bright: 150, 50, 225;
+	--clr-secondary: 100, 0, 155;
+	--clr-secondary-dark: 8, 0, 16;
+	--clr-secondary-bg: 6, 3, 11;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #111;
+	width: 100%;
+	height: 100%;
+	font-family: "Archivo", sans-serif;
+}
+
+::selection {
+	color: black;
+	background-color: rgb(var(--clr-primary));
+}
+
+@font-face {
+	font-family: "Gilroy-Black";
+	src: url("../fonts/Gilroy-Black.eot");
+	src: url("../fonts/Gilroy-Black.eot#iefix") format("embedded-opentype"),
+		url("../fonts/Gilroy-Black.ttf") format("truetype"),
+		url("../fonts/Gilroy-Black.woff") format("woff2"),
+		url("../fonts/Gilroy-Black.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "Gilroy-Bold";
+	src: url("../fonts/Gilroy-Bold.eot");
+	src: url("../fonts/Gilroy-Bold.eot#iefix") format("embedded-opentype"),
+		url("../fonts/Gilroy-Bold.ttf") format("truetype"),
+		url("../fonts/Gilroy-Bold.woff") format("woff2"),
+		url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}

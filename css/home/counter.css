@@ -1,0 +1,103 @@
+.counter-section {
+	padding: 120px 0px 50px;
+	background: #0a0a0a url(../../images/background/pattern-2.png) left top repeat;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.counter-block {
+	display: inline-block;
+
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.counter-block .inner-box {
+	min-height: 200px;
+}
+
+.counter-block .graph-outer {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 30px;
+	text-align: center;
+}
+
+.counter-block .graph-outer::before,
+.counter-block .graph-outer::after {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+
+.counter-block .graph-outer::after {
+	inset: 20px;
+	border: 5px solid rgb(var(--clr-secondary-bright));
+
+	transition: 5s var(--delay);
+}
+
+.counter-block.aos-animate .graph-outer::after {
+	box-shadow: 0 0 3px 0 rgb(var(--clr-secondary-bright)),
+		inset 0 0 3px 0 rgb(var(--clr-secondary-bright));
+}
+
+@property --fill {
+	syntax: "<percentage>";
+	inherits: false;
+	initial-value: 0%;
+}
+
+.counter-block .graph-outer::before {
+	inset: 0;
+	background: conic-gradient(
+		rgba(var(--clr-secondary-dark), 0.7) var(--fill),
+		transparent var(--fill)
+	);
+}
+
+.counter-block.aos-animate .graph-outer::before {
+	animation: backgroundanim 2s ease-in-out forwards;
+	animation-delay: var(--delay);
+}
+
+@keyframes backgroundanim {
+	from {
+		--fill: 0%;
+	}
+	to {
+		--fill: 100%;
+	}
+}
+
+.counter-block .graph-outer .count-box {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	font-size: 48px;
+	color: rgb(var(--clr-primary-bright));
+	font-weight: 700;
+	line-height: 60px;
+	margin-top: -30px;
+	font-family: "Gilroy-SemiBold", sans-serif;
+}
+
+.counter-block .graph-outer .count-box .sign {
+	font-size: 20px;
+}
+
+.counter-block h5 {
+	font-size: 20px;
+	line-height: 1.25em;
+	color: rgb(var(--clr-primary-bright));
+	font-weight: 400;
+	margin: 0;
+	text-transform: uppercase;
+}

@@ -1,0 +1,40 @@
+@import url("../root.css");
+
+@import url("./banner.css");
+@import url("./loader.css");
+@import url("./content.css");
+@import url("./header.css");
+@import url("./scrollbar.css");
+@import url("./bubbles.css");
+@import url("./about.css");
+@import url("./journey.css");
+@import url("./counter.css");
+@import url("./events.css");
+
+#offect {
+	position: fixed;
+	width: 150px;
+	height: 150px;
+
+	opacity: 0;
+
+	border: 2px solid rgb(var(--clr-secondary-bright));
+	border-radius: 50%;
+
+	pointer-events: none;
+
+	transform: translate(-50%, -50%);
+
+	z-index: 2;
+
+	transition: opacity 0.3s;
+}
+
+@keyframes huerotate {
+	from {
+		backdrop-filter: hue-rotate(0deg);
+	}
+	to {
+		backdrop-filter: hue-rotate(360deg);
+	}
+}

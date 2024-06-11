@@ -1,0 +1,6 @@
+{
+	"liveServer.settings.port": 5501,
+	"prettier.useTabs": true,
+	"prettier.enable": true,
+	"editor.formatOnSave": true,
+}
