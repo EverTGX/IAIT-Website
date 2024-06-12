@@ -6,15 +6,19 @@
         - Added Colors
         - Placeholder
         - (Edits done)
+
     - #### home/css/about.css:
         - Placeholder
         - Placeholder
+
     - **Akm Sajid** (Put your name at last)
 
 - ### Give a one block gap and continue
     - #### index.html:
         - Placeholder
         - (Edits done)
+        
     - #### fonts/NewFont.wff:
         - Added Font Family
+
     - **Akm Sajid** (Put your name at last)
