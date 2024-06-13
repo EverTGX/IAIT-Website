@@ -100,35 +100,102 @@
 
 .events-section .event-carousel {
 	display: flex;
-	margin: 70px 30px;
+	margin: 4.5rem 2rem;
 }
 
-.events-section .event-carousel .carousel-item {
-	display: flex;
+.events-section .event-carousel .single-event-item {
 	overflow: hidden;
 
-	height: 400px;
-	width: 500px;
+	position: relative;
 
-	margin: 0 20px;
+	display: flex;
+	flex-direction: column;
 
-	border: 3px solid red;
-	border-radius: 20px;
-}
+	min-height: 25rem;
 
-.events-section .event-carousel .carousel-item .elink .event-img {
-	height: 250px;
 	width: 100%;
+	height: 100%;
+
+	margin: 0 1.5rem;
+
+	border: 0.2rem solid rgb(var(--clr-secondary));
+	border-radius: 20px;
+
+	transition: 0.2s;
 }
 
-.events-section .event-carousel .carousel-item .elink .event-img img {
-	height: 250px;
+.events-section .event-carousel .single-event-item .event-img,
+.events-section .event-carousel .single-event-item .event-img img {
+	height: 15.5rem;
 	width: 100%;
 	object-fit: cover;
 }
 
-.events-section .event-carousel .carousel-item .elink .single-event-title .event-date {
-	background-color: white;
+.events-section .event-carousel .single-event-item .event-content {
+	height: 10rem;
+
+	display: flex;
+}
+
+.events-section .event-carousel .single-event-item .event-content .event-date {
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	background-color: rgb(var(--clr-secondary));
+	color: rgb(var(--clr-primary-dark));
+
+	height: 100%;
+	width: 8rem;
+	padding: 1rem;
+
+	transition: 0.2s;
+}
+
+.events-section
+	.event-carousel
+	.single-event-item
+	.event-content
+	.event-date
+	span {
+	display: block;
+	font-size: 1.5rem;
+}
+
+.events-section .event-carousel .single-event-item .event-content .event-name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	padding: 2rem;
+
+	height: 100%;
+	width: 100%;
+
+	font-size: 1.2rem;
+	background-color: rgb(var(--clr-primary-dark));
+	color: rgb(var(--clr-secondary));
+
+	transition: 0.2s;
+}
+
+.events-section
+	.event-carousel
+	.single-event-item:hover
+	.event-content
+	.event-date {
+	background-color: rgb(var(--clr-primary-dark));
+	color: rgb(var(--clr-secondary));
+}
+
+.events-section
+	.event-carousel
+	.single-event-item:hover
+	.event-content
+	.event-name {
+	background-color: rgb(var(--clr-secondary));
+	color: rgb(var(--clr-primary-dark));
 }
 
 .events-section .more-events {
@@ -156,13 +223,13 @@
 
 	border: 2px solid rgb(var(--clr-secondary));
 
-	transition: 300ms;
+	transition: 0.2s;
 }
 
 .events-section .more-events:hover,
 .events-section .more-events:focus {
+	color: rgb(var(--clr-secondary-bright));
 	background: transparent;
-	border-color: transparent;
 }
 
 .events-section .more-events span {
@@ -177,13 +244,11 @@
 	width: 100%;
 	height: 2px;
 	background-color: currentColor;
-	transition: opacity 300ms, transform 300ms;
-	opacity: 0;
+	transition: 0.2s;
 	transform: scaleX(0);
 }
 
 .events-section .more-events:hover span::after,
 .events-section .more-events:focus span::after {
-	opacity: 1;
 	transform: scaleX(1);
 }

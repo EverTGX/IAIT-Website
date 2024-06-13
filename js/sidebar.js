@@ -112,7 +112,7 @@ var executive = false;
 function executivetoggle(par) {
 	if (!executive && !par) {
 		executive = true;
-		$("#executivemenucontents").animate({ height: 126 });
+		$("#executivemenucontents").animate({ height: 160 });
 		$("#executivemenucontents")
 			.children()
 			.each((i, e) => {

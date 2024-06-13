@@ -57,7 +57,7 @@
 .counter-block .graph-outer::before {
 	inset: 0;
 	background: conic-gradient(
-		rgba(var(--clr-secondary-dark), 0.7) var(--fill),
+		rgba(var(--clr-secondary-dark), 0.6) var(--fill),
 		transparent var(--fill)
 	);
 }

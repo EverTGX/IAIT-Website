@@ -1,0 +1,152 @@
+.executives-section {
+	position: relative;
+	padding: 100px 0px;
+	background: #000;
+
+	overflow: hidden;
+}
+
+.faded-text {
+	position: absolute;
+	left: 0;
+	top: 70px;
+	width: 100%;
+	text-align: center;
+	font-family: "Gilroy-Bold", sans-serif;
+	color: transparent;
+	pointer-events: none;
+
+	animation: run 25s linear infinite alternate;
+}
+
+@keyframes run {
+	0% {
+		left: -30%;
+		left: -30%;
+	}
+	50% {
+		left: 0%;
+		left: 0%;
+	}
+	100% {
+		left: 30%;
+		left: 30%;
+	}
+}
+
+.faded-text .f-text {
+	display: block;
+	text-transform: uppercase;
+}
+
+.faded-text .f-text span {
+	display: block;
+	font-size: 200px;
+	line-height: 1em;
+	-webkit-text-stroke: 5px rgb(var(--clr-secondary-bright), 0.07);
+}
+
+.executives-section .sec-title {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.executives-section .sec-title .sub-title {
+	position: relative;
+	font-size: 20px;
+	line-height: 1.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: rgb(var(--clr-secondary-bright));
+	letter-spacing: 3px;
+
+	margin: 0 auto;
+}
+
+.executives-section .sec-title .sub-title::before,
+.executives-section .sec-title .sub-title::after {
+	content: "";
+	display: inline-block;
+	background-color: rgb(var(--clr-secondary-bright));
+	height: 3px;
+	width: 70px;
+
+	margin: 5px;
+}
+
+.executives-section .sec-title .sub-title::before {
+	margin-right: 15px;
+}
+
+.executives-section .sec-title .sub-title::after {
+	margin-left: 15px;
+}
+
+.executives-section .sec-title h2 {
+	font-size: 4em;
+	line-height: 2em;
+	color: rgb(var(--clr-primary-bright));
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: "Gilroy-Black", sans-serif;
+	text-shadow: 3px 3px 1px rgba(255, 255, 255, 0.3),
+		10px 10px 1px rgba(0, 0, 0, 0.1);
+
+	margin: 0;
+}
+
+.executives-section .full-executives {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 200px;
+	height: 60px;
+
+	text-transform: uppercase;
+
+	margin: 70px auto;
+
+	color: rgb(var(--clr-primary-bright));
+	text-decoration: none;
+	font-family: "Gilroy-Bold", sans-serif;
+
+	cursor: pointer;
+
+	background: linear-gradient(
+		rgb(var(--clr-secondary-bright)),
+		rgb(var(--clr-secondary))
+	);
+
+	border: 2px solid rgb(var(--clr-secondary));
+}
+
+.executives-section .full-executives:hover,
+.executives-section .full-executives:focus {
+	color: rgb(var(--clr-secondary-bright));
+	background: transparent;
+}
+
+.executives-section .full-executives span {
+	position: relative;
+}
+
+.executives-section .full-executives span::after {
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: currentColor;
+	transition: 0.3s;
+	transform: scaleX(0);
+}
+
+.executives-section .full-executives:hover span::after,
+.executives-section .full-executives:focus span::after {
+	transform: scaleX(1);
+}
