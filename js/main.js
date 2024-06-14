@@ -6,7 +6,7 @@ if (!sessionStorage.getItem("online") || sessionStorage.getItem("devmode")) {
 }
 
 $("#headerlogo").click(() => {
-	window.location.href = "https://iaitbd.com/";
+	window.location.href = "https://iaitorg.com/";
 });
 
 function loaderOut() {

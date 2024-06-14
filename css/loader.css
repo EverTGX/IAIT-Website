@@ -22,7 +22,7 @@
 	position: absolute;
 	width: 250px;
 	height: 35px;
-	background: url(../../assets/logo.svg) no-repeat;
+	background: url(../assets/logo.svg) no-repeat;
 	background-size: cover;
 	filter: drop-shadow(0 0 25px rgb(175, 0, 255));
 	animation: IR 2s infinite 2s linear;
