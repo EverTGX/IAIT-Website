@@ -6,7 +6,7 @@
 	overflow: hidden;
 }
 
-.faded-text {
+.events-section .faded-text {
 	position: absolute;
 	left: 0;
 	top: 70px;
@@ -34,12 +34,12 @@
 	}
 }
 
-.faded-text .f-text {
+.events-section .faded-text .f-text {
 	display: block;
 	text-transform: uppercase;
 }
 
-.faded-text .f-text span {
+.events-section .faded-text .f-text span {
 	display: block;
 	font-size: 200px;
 	line-height: 1em;
@@ -56,7 +56,7 @@
 
 .events-section .sec-title .sub-title {
 	position: relative;
-	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5em;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -86,7 +86,7 @@
 }
 
 .events-section .sec-title h2 {
-	font-size: 4em;
+	font-size: 4rem;
 	line-height: 2em;
 	color: rgb(var(--clr-primary-bright));
 	font-weight: 400;
@@ -116,7 +116,7 @@
 	width: 100%;
 	height: 100%;
 
-	margin: 0 1.5rem;
+	margin: 1.5rem;
 
 	border: 0.2rem solid rgb(var(--clr-secondary));
 	border-radius: 20px;
@@ -251,4 +251,33 @@
 .events-section .more-events:hover span::after,
 .events-section .more-events:focus span::after {
 	transform: scaleX(1);
+}
+
+@media only screen and (max-width: 720px) {
+	.events-section .faded-text {
+		top: 70px;
+	}
+
+	.events-section .faded-text .f-text span {
+		font-size: 10rem;
+	}
+
+	.events-section .event-carousel {
+		flex-wrap: wrap;
+		margin: 4.5rem 0;
+	}
+
+	.events-section .sec-title .sub-title {
+		font-size: 1rem;
+	}
+
+	.events-section .sec-title .sub-title::before,
+	.events-section .sec-title .sub-title::after {
+		display: none;
+	}
+
+	.events-section .sec-title h2 {
+		font-size: 3rem;
+	}
+	
 }

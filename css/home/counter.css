@@ -5,6 +5,8 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+
+	flex-wrap: wrap;
 }
 
 .counter-block {
@@ -90,11 +92,11 @@
 }
 
 .counter-block .graph-outer .count-box .sign {
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 .counter-block h5 {
-	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.25em;
 	color: rgb(var(--clr-primary-bright));
 	font-weight: 400;

@@ -6,7 +6,7 @@
 	overflow: hidden;
 }
 
-.faded-text {
+.executives-section .faded-text {
 	position: absolute;
 	left: 0;
 	top: 70px;
@@ -34,12 +34,12 @@
 	}
 }
 
-.faded-text .f-text {
+.executives-section .faded-text .f-text {
 	display: block;
 	text-transform: uppercase;
 }
 
-.faded-text .f-text span {
+.executives-section .faded-text .f-text span {
 	display: block;
 	font-size: 200px;
 	line-height: 1em;
@@ -56,7 +56,7 @@
 
 .executives-section .sec-title .sub-title {
 	position: relative;
-	font-size: 20px;
+	font-size: 1.25rem;
 	line-height: 1.5em;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -96,6 +96,157 @@
 		10px 10px 1px rgba(0, 0, 0, 0.1);
 
 	margin: 0;
+}
+
+.executive-cards-container {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 3rem 0;
+
+	width: max-content;
+
+	animation: scroll 40s linear infinite;
+}
+
+.executive-cards-container:has(.card:hover) {
+	animation-play-state: paused;
+}
+
+@keyframes scroll {
+	100% {
+		transform: translateX(calc(-50%));
+	}
+}
+
+.executive-cards-container .card {
+	position: relative;
+	width: 25rem;
+	/* height: 475px; */
+	aspect-ratio: 0.73;
+	margin: 1.5rem 2rem;
+	border: 0.15rem solid rgb(var(--clr-secondary));
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.executive-cards-container .card .card-image {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	transition: 0.5s;
+}
+
+.executive-cards-container .card:hover .card-image,
+.executive-cards-container .card:focus .card-image {
+	top: -10%;
+	left: -10%;
+	width: 120%;
+	height: 120%;
+}
+
+.executive-cards-container .card .card-image img {
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+}
+
+.executive-cards-container .card:hover img,
+.executive-cards-container .card:focus img {
+	opacity: 0.5;
+}
+
+.executive-cards-container .social-icons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	display: flex;
+	padding: 0;
+}
+
+.executive-cards-container .social-icons li {
+	list-style: none;
+}
+
+.executive-cards-container .social-icons li a {
+	text-decoration: none;
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background: rgba(var(--clr-primary-dark), 0.8);
+	font-size: 1.75rem;
+	color: rgb(var(--clr-primary-bright));
+	margin: 0 1rem;
+	transition: transform 0.5s, background 0.3s, opacity 0.2s;
+	transform: translateY(200px);
+	border-radius: 50%;
+	opacity: 0;
+}
+
+.executive-cards-container .card:hover .social-icons li a,
+.executive-cards-container .card:focus .social-icons li a {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.executive-cards-container .social-icons li .fab {
+	transition: 0.3s;
+	font-family: FontAwesome;
+}
+
+.executive-cards-container .social-icons li a:hover .fab,
+.executive-cards-container .social-icons li a:focus .fab {
+	color: rgb(var(--clr-secondary));
+}
+
+.executive-cards-container .card:hover li:nth-child(1) a,
+.executive-cards-container .card:focus li:nth-child(1) a {
+	transition-delay: 0.1s;
+}
+
+.executive-cards-container .card:hover li:nth-child(2) a,
+.executive-cards-container .card:focus li:nth-child(2) a {
+	transition-delay: 0.25s;
+}
+
+.executive-cards-container .details {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(var(--clr-primary-dark), 0.8);
+	width: 100%;
+	height: 120px;
+	padding: 0.5rem;
+	transition: 0.5s;
+	z-index: 9;
+}
+
+.executive-cards-container .details h2 {
+	font-size: auto;
+	max-width: 100%;
+	margin: 10px 0;
+	padding: 0;
+	text-align: center;
+	color: rgb(var(--clr-primary-bright));
+}
+
+.executive-cards-container .details h2 .title {
+	font-size: 1rem;
+	line-height: 2.5rem;
+	color: rgba(var(--clr-primary-bright), 0.8);
+	font-weight: 300;
+}
+
+.executive-cards-container .card:hover .details,
+.executive-cards-container .card:focus .details {
+	transform: translateY(0%);
 }
 
 .executives-section .full-executives {
@@ -149,4 +300,27 @@
 .executives-section .full-executives:hover span::after,
 .executives-section .full-executives:focus span::after {
 	transform: scaleX(1);
+}
+
+@media only screen and (max-width: 720px) {
+	.executives-section .faded-text {
+		top: 60px;
+	}
+
+	.executives-section .faded-text .f-text span {
+		font-size: 10rem;
+	}
+
+	.executives-section .sec-title .sub-title {
+		font-size: 1rem;
+	}
+
+	.executives-section .sec-title .sub-title::before,
+	.executives-section .sec-title .sub-title::after {
+		display: none;
+	}
+
+	.executives-section .sec-title h2 {
+		font-size: 2rem;
+	}
 }

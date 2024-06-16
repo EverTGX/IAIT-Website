@@ -5,12 +5,12 @@
 @import url("../header.css");
 
 @import url("./banner.css");
-@import url("./bubbles.css");
 @import url("./about.css");
 @import url("./journey.css");
 @import url("./counter.css");
 @import url("./events.css");
 @import url("./executives.css");
+@import url("./contact.css");
 
 #offect {
 	position: fixed;
@@ -28,7 +28,7 @@
 
 	z-index: 2;
 
-	transition: opacity 0.3s;
+	transition: opacity 0.2s;
 }
 
 @keyframes huerotate {

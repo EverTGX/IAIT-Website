@@ -1,8 +1,12 @@
+/* 
+	Respect for whoever created this. (This was in the old IAIT Website)
+	but it's time we change it.
+*/
+
+
 .bubble-dotted {
 	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
+	inset: 0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;

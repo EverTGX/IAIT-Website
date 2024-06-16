@@ -13,7 +13,7 @@
 }
 
 .journey-section .text-column .sec-title h1 {
-	font-size: 3.5em;
+	font-size: 3.5rem;
 	line-height: 1.2em;
 	color: rgb(var(--clr-primary-bright));
 	font-weight: 900;
@@ -28,11 +28,11 @@
 	position: relative;
 	display: block;
 	font-family: "Archivo", sans-serif;
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 1.65em;
 	color: rgb(var(--clr-primary-bright));
 	margin-top: 50px;
-	padding: 1em;
+	padding: 1rem;
 
 	text-align: left;
 }
@@ -62,10 +62,6 @@
 	);
 
 	z-index: -1;
-}
-
-.journey-section .image-column {
-	order: 0;
 }
 
 .journey-section .image-column .inner {
@@ -106,4 +102,24 @@
 	background: url(../../images/icons/pattern-1.png) left -7px repeat;
 
 	filter: hue-rotate(280deg);
+}
+
+@media only screen and (max-width: 720px) {
+	.journey-section {
+		flex-direction: column;
+		padding: 3rem 0;
+	}
+
+	.journey-section .text-column {
+		padding: 1.2rem;
+		max-width: 100%;
+	}
+
+	.journey-section .text-column .sec-title h1 {
+		font-size: 2rem;
+	}
+
+	.journey-section .image-column {
+		display: none;
+	}
 }

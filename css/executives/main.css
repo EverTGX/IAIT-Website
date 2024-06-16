@@ -1,0 +1,240 @@
+@import url("../root.css");
+
+@import url("../loader.css");
+@import url("../scrollbar.css");
+@import url("../header.css");
+
+.executives-section {
+	position: relative;
+	background: #000;
+
+	overflow: hidden;
+
+	padding: 10rem 0;
+}
+
+.faded-text {
+	position: absolute;
+	left: 0;
+	top: 70px;
+	width: 100%;
+	text-align: center;
+	font-family: "Gilroy-Bold", sans-serif;
+	color: transparent;
+	pointer-events: none;
+
+	animation: run 25s linear infinite alternate;
+}
+
+@keyframes run {
+	0% {
+		left: -30%;
+		left: -30%;
+	}
+	50% {
+		left: 0%;
+		left: 0%;
+	}
+	100% {
+		left: 30%;
+		left: 30%;
+	}
+}
+
+.faded-text .f-text {
+	display: block;
+	text-transform: uppercase;
+}
+
+.faded-text .f-text span {
+	display: block;
+	font-size: 200px;
+	line-height: 1em;
+	-webkit-text-stroke: 5px rgb(var(--clr-secondary), 0.07);
+}
+
+.sec-title {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.sec-title .sub-title {
+	position: relative;
+	font-size: 2rem;
+	line-height: 1.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: rgb(var(--clr-secondary-bright));
+	letter-spacing: 3px;
+
+	margin: 0 auto;
+}
+
+.sec-title .sub-title::before,
+.sec-title .sub-title::after {
+	content: "";
+	display: inline-block;
+	background-color: rgb(var(--clr-secondary-bright));
+	height: 3px;
+	width: 70px;
+
+	margin: 10px;
+}
+
+.sec-title .sub-title::before {
+	margin-right: 15px;
+}
+
+.sec-title .sub-title::after {
+	margin-left: 15px;
+}
+
+.card-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: 3rem 0;
+}
+
+.card {
+	position: relative;
+	width: 350px;
+	height: 475px;
+	margin: 1.5rem 2rem;
+	border: 0.15rem solid rgb(var(--clr-secondary));
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.card .card-image {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	transition: 0.5s;
+}
+
+.card:hover .card-image,
+.card:focus .card-image {
+	top: -10%;
+	left: -10%;
+	width: 120%;
+	height: 120%;
+}
+
+.card .card-image img {
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+}
+
+.card:hover img,
+.card:focus img {
+	opacity: 0.5;
+}
+
+.social-icons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	display: flex;
+	padding: 0;
+}
+
+.social-icons li {
+	list-style: none;
+}
+
+.social-icons li a {
+	text-decoration: none;
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background: rgba(var(--clr-primary-dark), 0.8);
+	font-size: 1.75rem;
+	color: rgb(var(--clr-primary-bright));
+	margin: 0 1rem;
+	transition: transform 0.5s, background 0.3s, opacity 0.2s;
+	transform: translateY(200px);
+	border-radius: 50%;
+	opacity: 0;
+}
+
+.card:hover .social-icons li a,
+.card:focus .social-icons li a {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.social-icons li .fab {
+	transition: 0.3s;
+	font-family: FontAwesome;
+}
+
+.social-icons li a:hover .fab,
+.social-icons li a:focus .fab {
+	color: rgb(var(--clr-secondary));
+}
+
+.card:hover li:nth-child(1) a,
+.card:focus li:nth-child(1) a {
+	transition-delay: 0.1s;
+}
+
+.card:hover li:nth-child(2) a,
+.card:focus li:nth-child(2) a {
+	transition-delay: 0.25s;
+}
+
+.card:hover li:nth-child(3) a,
+.card:focus li:nth-child(3) a {
+	transition-delay: 0.4s;
+}
+
+.card:hover li:nth-child(4) a,
+.card:focus li:nth-child(4) a {
+	transition-delay: 0.55s;
+}
+
+.details {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(var(--clr-primary-dark), 0.8);
+	width: 100%;
+	height: 120px;
+	padding: 0.5rem;
+	transition: 0.5s;
+	z-index: 9;
+}
+
+.details h2 {
+	font-size: auto;
+	max-width: 100%;
+	margin: 10px 0;
+	padding: 0;
+	text-align: center;
+	color: rgb(var(--clr-primary-bright));
+}
+
+.details h2 .title {
+	font-size: 1rem;
+	line-height: 2.5rem;
+	color: rgba(var(--clr-primary-bright), 0.8);
+	font-weight: 300;
+}
+
+.card:hover .details,
+.card:focus .details {
+	transform: translateY(0%);
+}

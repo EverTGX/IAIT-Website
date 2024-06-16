@@ -1,50 +1,43 @@
 .banner-section {
-	z-index: 1;
 	background-color: rgb(var(--clr-primary-bg));
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	min-height: 100vh;
+	padding: 8rem 3rem;
 }
 
-.banner-one .image-layer {
+#particles {
 	position: absolute;
-	left: 0;
-	top: 0;
+	inset: 0;
 	width: 100%;
 	height: 100%;
-	opacity: 1;
-}
-
-.banner-one .content-box {
-	height: 100%;
-	width: 100%;
-	z-index: 5;
-}
-
-.banner-one .content-box .content {
-	padding-left: 40%;
-	padding-top: 17%;
-	padding-bottom: 17%;
+	overflow: hidden;
+	pointer-events: none;
 }
 
 .banner-one .content-box .inner {
 	display: block;
 	width: 100%;
-	max-width: 720px;
 	text-align: center;
 }
 
 .banner-one .content-box .services-title {
 	display: block;
-	font-size: 18px;
+	font-size: 1.2rem;
 	line-height: 1.5em;
 	color: rgba(var(--clr-primary-bright), 0.7);
-	font-weight: 700;
+	font-weight: 600;
 	text-transform: uppercase;
 }
 
 .banner-one .content-box .line {
 	position: relative;
 	display: block;
-	padding-top: 27px;
-	margin-top: 30px;
+	padding-top: 1.8rem;
+	margin-top: 2rem;
 	text-transform: uppercase;
 }
 
@@ -52,8 +45,8 @@
 	content: "";
 	position: absolute;
 	left: 50%;
-	width: 220px;
-	margin-left: -110px;
+	width: 15rem;
+	margin-left: -7rem;
 	top: 0px;
 	height: 2px;
 	background: rgb(100, 0, 155);
@@ -66,7 +59,7 @@
 }
 
 .banner-one .content-box h1 {
-	font-size: 3.2em;
+	font-size: 3.2rem;
 	line-height: 1.2em;
 	color: rgb(var(--clr-primary-bright));
 	font-weight: 900;
@@ -79,18 +72,30 @@
 
 .banner-one .content-box .text {
 	display: block;
-	font-size: 16px;
+	font-size: 1.2rem;
 	line-height: 1.7em;
 	color: rgb(var(--clr-primary-bright));
 	font-weight: 400;
 }
 
-.mlogo {
-	margin-left: 5%;
-	margin-top: 13%;
+.mlogo img {
+	width: 25rem;
 }
 
-.mlogo img {
-	width: 35%;
-	height: auto;
+@media only screen and (max-width: 720px) {
+	.banner-section {
+		flex-direction: column;
+	}
+
+	.banner-one .content-box h1 {
+		font-size: 1.8rem;
+	}
+
+	.banner-one .content-box .services-title {
+		font-size: 0.8rem;
+	}
+
+	.mlogo img {
+		width: 20rem;
+	}
 }

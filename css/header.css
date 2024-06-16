@@ -13,12 +13,12 @@
 
 #header.scroll {
 	background-color: rgba(var(--clr-secondary-dark), 0.75);
-	padding: 1rem;
+	padding: 0.5rem;
 	backdrop-filter: blur(0.45rem);
 }
 
 #header.scroll + #sidebarbtn {
-	margin: 3rem;
+	margin: 2.5rem;
 }
 
 #sidebarbtn {
