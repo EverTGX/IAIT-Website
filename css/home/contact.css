@@ -16,21 +16,18 @@
 	color: transparent;
 	pointer-events: none;
 
-	animation: run 25s linear infinite alternate;
+	animation: run 15s linear infinite alternate;
 }
 
 @keyframes run {
 	0% {
-		left: -30%;
-		left: -30%;
+		left: -10%;
 	}
 	50% {
 		left: 0%;
-		left: 0%;
 	}
 	100% {
-		left: 30%;
-		left: 30%;
+		left: 10%;
 	}
 }
 
