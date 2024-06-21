@@ -1,9 +1,11 @@
-if (!sessionStorage.getItem("online") || sessionStorage.getItem("devmode")) {
-	sessionStorage.setItem("online", "true");
-	$(document).ready(loaderOut());
-} else {
-	$(document).ready(noloader());
-}
+document.addEventListener("load", () => {
+	if (!sessionStorage.getItem("online") || sessionStorage.getItem("devmode")) {
+		sessionStorage.setItem("online", "true");
+		$(document).ready(loaderOut());
+	} else {
+		$(document).ready(noloader());
+	}
+});
 
 $("#headerlogo").click(() => {
 	window.location.href = "https://iaitorg.com/";
