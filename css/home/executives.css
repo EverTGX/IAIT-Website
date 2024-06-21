@@ -1,7 +1,7 @@
 .executives-section {
 	position: relative;
 	padding: 100px 0px;
-	background: #000;
+	background: rgb(var(--clr-primary-bg));
 
 	overflow: hidden;
 }
@@ -148,6 +148,7 @@
 	width: 100%;
 	height: 100%;
 	transition: 0.5s;
+	object-fit: cover;
 }
 
 .executive-cards-container .card:hover img,

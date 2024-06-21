@@ -45,22 +45,11 @@
 	width: 100%;
 	height: 100%;
 	border-left: 3px solid rgb(var(--clr-secondary-bright));
-	background: -webkit-linear-gradient(
-		left,
-		rgba(150, 50, 225, 0.1),
+	background: linear-gradient(
+		to right,
+		rgba(var(--clr-secondary-bright), 0.1),
 		rgba(0, 0, 0, 0)
 	);
-	background: -ms-linear-gradient(
-		left,
-		rgba(150, 50, 225, 0.1),
-		rgba(0, 0, 0, 0)
-	);
-	background: -moz-linear-gradient(
-		left,
-		rgba(150, 50, 225, 0.1),
-		rgba(0, 0, 0, 0)
-	);
-
 	z-index: -1;
 }
 

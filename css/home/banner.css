@@ -49,11 +49,11 @@
 	margin-left: -7rem;
 	top: 0px;
 	height: 2px;
-	background: rgb(100, 0, 155);
+	background: rgb(var(--clr-secondary));
 	background: linear-gradient(
 		90deg,
 		rgba(255, 255, 255, 0) 0%,
-		rgb(100, 0, 155) 50%,
+		rgb(var(--clr-secondary)) 50%,
 		rgba(255, 255, 255, 0) 100%
 	);
 }

@@ -1,7 +1,6 @@
 .events-section {
 	position: relative;
 	padding: 100px 0px;
-	background: #0c0c0c;
 
 	overflow: hidden;
 }
@@ -276,5 +275,4 @@
 	.events-section .sec-title h2 {
 		font-size: 3rem;
 	}
-	
 }

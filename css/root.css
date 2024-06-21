@@ -10,6 +10,34 @@
 	--clr-secondary-bg: 6, 3, 11;
 }
 
+@media (prefers-color-scheme: light) {
+	:root {
+		--clr-primary-bg: 185, 185, 185;
+		--clr-primary-dark: 150, 150, 150;
+		--clr-primary: 16, 16, 16;
+		--clr-primary-bright: 6, 6, 6;
+
+		--clr-secondary-bright: 150, 50, 225;
+		--clr-secondary: 100, 0, 155;
+		--clr-secondary-dark: 25, 25, 25;
+		--clr-secondary-bg: 6, 3, 11;
+	}
+}
+
+@media (prefers-color-scheme: legacy) {
+	:root {
+		--clr-primary-bright: 255, 255, 255;
+		--clr-primary: 200, 200, 200;
+		--clr-primary-dark: 16, 16, 16;
+		--clr-primary-bg: 6, 6, 6;
+
+		--clr-secondary-bright: 225, 0, 0;
+		--clr-secondary: 155, 0, 0;
+		--clr-secondary-dark: 25, 0, 0;
+		--clr-secondary-bg: 15, 0, 0;
+	}
+}
+
 *,
 *::before,
 *::after {
@@ -21,7 +49,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #111;
+	background-color: rgb(var(--clr-primary-dark));
 	width: 100%;
 	height: 100%;
 	font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",

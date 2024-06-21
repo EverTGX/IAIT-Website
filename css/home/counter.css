@@ -1,6 +1,7 @@
 .counter-section {
 	padding: 120px 0px 50px;
-	background: #0a0a0a url(../../images/background/pattern-2.png) left top repeat;
+	background: rgb(var(--clr-primary-bg))
+		url(../../images/background/pattern-2.png) left top repeat;
 
 	display: flex;
 	justify-content: space-evenly;
@@ -59,7 +60,7 @@
 .counter-block .graph-outer::before {
 	inset: 0;
 	background: conic-gradient(
-		rgba(var(--clr-secondary-dark), 0.6) var(--fill),
+		rgba(var(--clr-secondary-dark), 0.8) var(--fill),
 		transparent var(--fill)
 	);
 }
