@@ -1,12 +1,3 @@
-document.addEventListener("load", () => {
-	if (!sessionStorage.getItem("online") || sessionStorage.getItem("devmode")) {
-		sessionStorage.setItem("online", "true");
-		$(document).ready(loaderOut());
-	} else {
-		$(document).ready(noloader());
-	}
-});
-
 $("#headerlogo").click(() => {
 	window.location.href = "https://iaitorg.com/";
 });
@@ -32,3 +23,12 @@ function noloader() {
 	$("#content").fadeIn();
 	AOS.init({ duration: 800, once: true });
 }
+
+$(document).ready(() => {
+	if (!sessionStorage.getItem("online") || sessionStorage.getItem("devmode")) {
+		sessionStorage.setItem("online", "true");
+		loaderOut();
+	} else {
+		noloader();
+	}
+});

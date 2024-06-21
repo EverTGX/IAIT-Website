@@ -117,9 +117,8 @@
 
 .executive-cards-container .card {
 	position: relative;
-	width: 25rem;
-	/* height: 475px; */
-	aspect-ratio: 0.73;
+	width: 20rem;
+	height: 27.5rem;
 	margin: 1.5rem 2rem;
 	border: 0.15rem solid rgb(var(--clr-secondary));
 	border-radius: 1rem;
