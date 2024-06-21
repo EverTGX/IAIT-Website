@@ -24,44 +24,11 @@ function noloader() {
 	AOS.init({ duration: 800, once: true });
 }
 
-function imagesLoaded() {
-	let totalImages = $("img").length;
-	let imagesLoaded = 0;
-
-	$("img").each(function () {
-		if (this.complete) {
-			imagesLoaded++;
-		} else {
-			$(this)
-				.one("load", function () {
-					imagesLoaded++;
-					if (imagesLoaded === totalImages) {
-						allImagesLoaded();
-					}
-				})
-				.one("error", function () {
-					imagesLoaded++;
-					if (imagesLoaded === totalImages) {
-						allImagesLoaded();
-					}
-				});
-		}
-	});
-
-	if (totalImages === 0) {
-		allImagesLoaded();
-	}
-}
-
-function allImagesLoaded() {
+$(window).on("load", () => {
 	if (!sessionStorage.getItem("online") || sessionStorage.getItem("devmode")) {
 		sessionStorage.setItem("online", "true");
 		loaderOut();
 	} else {
 		noloader();
 	}
-}
-
-$(window).on("load", () => {
-	imagesLoaded();
 });
