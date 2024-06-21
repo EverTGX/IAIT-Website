@@ -24,7 +24,7 @@ function noloader() {
 	AOS.init({ duration: 800, once: true });
 }
 
-$(document).ready(() => {
+$(window).on("load", () => {
 	if (!sessionStorage.getItem("online") || sessionStorage.getItem("devmode")) {
 		sessionStorage.setItem("online", "true");
 		loaderOut();
