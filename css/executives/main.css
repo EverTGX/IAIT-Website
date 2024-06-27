@@ -271,4 +271,12 @@
 	.sec-title .sub-title::after {
 		display: none;
 	}
+
+	.details h2 {
+		font-size: 1.1rem;
+	}
+
+	.details h2 .title {
+		font-size: 0.8rem;
+	}
 }
