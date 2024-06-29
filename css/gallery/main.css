@@ -1,0 +1,143 @@
+@import url("../root.css");
+
+@import url("../loader.css");
+@import url("../scrollbar.css");
+@import url("../header.css");
+
+.gallery-section {
+	position: relative;
+	background: #000;
+
+	overflow: hidden;
+
+	padding: 10rem 0;
+}
+
+.gallery-section .heading {
+	font-size: 5rem;
+	line-height: 2em;
+	color: rgb(var(--clr-primary-bright));
+	font-weight: 400;
+	text-transform: uppercase;
+	font-family: "Gilroy-Black", sans-serif;
+	text-shadow: 3px 3px 1px rgba(255, 255, 255, 0.3),
+		10px 10px 1px rgba(0, 0, 0, 0.1);
+
+	margin: 0;
+
+	width: 100%;
+	text-align: center;
+}
+
+.faded-text {
+	position: absolute;
+	left: 0;
+	top: 120px;
+	width: 100%;
+	text-align: center;
+	font-family: "Gilroy-Bold", sans-serif;
+	color: transparent;
+	pointer-events: none;
+
+	animation: run 15s linear infinite alternate;
+}
+
+@keyframes run {
+	0% {
+		left: -10%;
+	}
+	50% {
+		left: 0%;
+	}
+	100% {
+		left: 10%;
+	}
+}
+
+.faded-text .f-text {
+	display: block;
+	text-transform: uppercase;
+}
+
+.faded-text .f-text span {
+	display: block;
+	font-size: 200px;
+	line-height: 1em;
+	-webkit-text-stroke: 5px rgb(var(--clr-secondary), 0.07);
+}
+
+.sec-title {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin: 5rem 0;
+}
+
+.sec-title .sub-title {
+	position: relative;
+	font-size: 2rem;
+	line-height: 1.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: rgb(var(--clr-secondary-bright));
+	letter-spacing: 3px;
+
+	margin: 0 auto;
+}
+
+.sec-title .sub-title::before,
+.sec-title .sub-title::after {
+	content: "";
+	display: inline-block;
+	background-color: rgb(var(--clr-secondary-bright));
+	height: 3px;
+	width: 70px;
+
+	margin: 10px;
+}
+
+.sec-title .sub-title::before {
+	margin-right: 15px;
+}
+
+.sec-title .sub-title::after {
+	margin-left: 15px;
+}
+
+.image-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.image-wrapper .gal-in {
+	padding: 0.5rem;
+}
+
+.image-wrapper .gal-in .gal-fig {
+	margin: 0;
+}
+
+.image-wrapper .gal-in .gal-fig .gal-img {
+	height: 200px;
+	width: 300px;
+	object-fit: cover;
+}
+
+@media only screen and (max-width: 720px) {
+	.gallery-section .heading {
+		font-size: 2rem;
+	}
+
+	.sec-title .sub-title {
+		font-size: 1.5rem;
+	}
+
+	.sec-title .sub-title::before,
+	.sec-title .sub-title::after {
+		display: none;
+	}
+}
