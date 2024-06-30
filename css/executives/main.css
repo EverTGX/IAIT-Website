@@ -10,7 +10,7 @@
 
 	overflow: hidden;
 
-	padding: 10rem 0;
+	padding: 8rem 0;
 }
 
 .executives-section .heading {
@@ -33,7 +33,7 @@
 .faded-text {
 	position: absolute;
 	left: 0;
-	top: 150px;
+	top: 125px;
 	width: 100%;
 	text-align: center;
 	font-family: "Gilroy-Bold", sans-serif;
@@ -262,6 +262,10 @@
 @media only screen and (max-width: 720px) {
 	.executives-section .heading {
 		font-size: 2rem;
+	}
+
+	.faded-text {
+		top: 115px;
 	}
 
 	.faded-text .f-text span {

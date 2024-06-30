@@ -94,12 +94,12 @@
 	margin: 0;
 }
 
-.events-section .event-carousel {
+.events-section .event-container {
 	display: flex;
 	margin: 4.5rem 2rem;
 }
 
-.events-section .event-carousel .single-event-item {
+.events-section .event-container .single-event-item {
 	overflow: hidden;
 
 	position: relative;
@@ -120,20 +120,20 @@
 	transition: 0.2s;
 }
 
-.events-section .event-carousel .single-event-item .event-img,
-.events-section .event-carousel .single-event-item .event-img img {
+.events-section .event-container .single-event-item .event-img,
+.events-section .event-container .single-event-item .event-img img {
 	height: 15.5rem;
 	width: 100%;
 	object-fit: cover;
 }
 
-.events-section .event-carousel .single-event-item .event-content {
+.events-section .event-container .single-event-item .event-content {
 	height: 10rem;
 
 	display: flex;
 }
 
-.events-section .event-carousel .single-event-item .event-content .event-date {
+.events-section .event-container .single-event-item .event-content .event-date {
 	display: flex;
 	align-items: center;
 	text-align: center;
@@ -149,7 +149,7 @@
 }
 
 .events-section
-	.event-carousel
+	.event-container
 	.single-event-item
 	.event-content
 	.event-date
@@ -158,7 +158,7 @@
 	font-size: 1.5rem;
 }
 
-.events-section .event-carousel .single-event-item .event-content .event-name {
+.events-section .event-container .single-event-item .event-content .event-name {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -177,7 +177,7 @@
 }
 
 .events-section
-	.event-carousel
+	.event-container
 	.single-event-item:hover
 	.event-content
 	.event-date {
@@ -186,7 +186,7 @@
 }
 
 .events-section
-	.event-carousel
+	.event-container
 	.single-event-item:hover
 	.event-content
 	.event-name {
@@ -258,7 +258,7 @@
 		font-size: 10rem;
 	}
 
-	.events-section .event-carousel {
+	.events-section .event-container {
 		flex-wrap: wrap;
 		margin: 4.5rem 0;
 	}
