@@ -28,7 +28,11 @@ $(window).on("load", () => {
 	if (!sessionStorage.getItem("online") || sessionStorage.getItem("devmode")) {
 		sessionStorage.setItem("online", "true");
 		loaderOut();
+		clearTimeout(loadTimer);
 	} else {
 		noloader();
+		clearTimeout(loadTimer);
 	}
 });
+
+let loadTimer = setTimeout(loaderOut, 15000);

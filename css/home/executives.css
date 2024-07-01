@@ -6,43 +6,6 @@
 	overflow: hidden;
 }
 
-.executives-section .faded-text {
-	position: absolute;
-	left: 0;
-	top: 70px;
-	width: 100%;
-	text-align: center;
-	font-family: "Gilroy-Bold", sans-serif;
-	color: transparent;
-	pointer-events: none;
-
-	animation: run 15s linear infinite alternate;
-}
-
-@keyframes run {
-	0% {
-		left: -10%;
-	}
-	50% {
-		left: 0%;
-	}
-	100% {
-		left: 10%;
-	}
-}
-
-.executives-section .faded-text .f-text {
-	display: block;
-	text-transform: uppercase;
-}
-
-.executives-section .faded-text .f-text span {
-	display: block;
-	font-size: 200px;
-	line-height: 1em;
-	-webkit-text-stroke: 5px rgb(var(--clr-secondary-bright), 0.07);
-}
-
 .executives-section .sec-title {
 	width: 100%;
 	display: flex;
@@ -300,14 +263,6 @@
 }
 
 @media only screen and (max-width: 720px) {
-	.executives-section .faded-text {
-		top: 60px;
-	}
-
-	.executives-section .faded-text .f-text span {
-		font-size: 10rem;
-	}
-
 	.executives-section .sec-title .sub-title {
 		font-size: 1rem;
 	}

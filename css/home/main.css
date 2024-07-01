@@ -11,6 +11,7 @@
 @import url("./events.css");
 @import url("./executives.css");
 @import url("./contact.css");
+@import url("../headings.css");
 
 #offect {
 	position: fixed;
