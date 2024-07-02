@@ -40,3 +40,16 @@
 		backdrop-filter: hue-rotate(360deg);
 	}
 }
+
+.faded-text {
+	position: absolute;
+	left: 0;
+	top: 75px;
+	width: 100%;
+	text-align: center;
+	font-family: "Gilroy-Bold", sans-serif;
+	color: transparent;
+	pointer-events: none;
+
+	animation: run 30s linear infinite alternate;
+}

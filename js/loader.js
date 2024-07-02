@@ -35,4 +35,4 @@ $(window).on("load", () => {
 	}
 });
 
-let loadTimer = setTimeout(loaderOut, 15000);
+let loadTimer = setTimeout(loaderOut, 10000);
