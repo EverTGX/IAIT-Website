@@ -6,8 +6,8 @@
 	color: rgb(var(--clr-primary-bright));
 	text-transform: uppercase;
 	font-family: "Gilroy-Black", sans-serif;
-	text-shadow: 3px 3px 1px rgba(255, 255, 255, 0.3),
-		10px 10px 1px rgba(0, 0, 0, 0.1);
+	text-shadow: 3px 3px 1px rgba(var(--clr-primary-bright), 0.3),
+		10px 10px 1px rgba(var(--clr-primary-dark), 0.1);
 
 	margin-top: 5rem 0;
 

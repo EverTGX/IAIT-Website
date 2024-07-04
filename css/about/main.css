@@ -12,3 +12,45 @@
 
 	padding: 8rem 0;
 }
+
+.bg {
+	position: absolute;
+	inset: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	overflow: hidden;
+}
+
+.bg img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+.about-section .heading {
+	color: rgb(var(--clr-primary-bright));
+	text-shadow: 3px 3px 1px rgba(var(--clr-primary-dark), 0.3),
+		10px 10px 1px rgba(var(--clr-primary-dark), 0.1);
+}
+
+.faded-text {
+	display: none;
+}
+
+.container {
+	min-height: 500vh;
+}
+
+@media only screen and (max-width: 720px) {
+	.bg {
+		display: none;
+	}
+
+	.faded-text {
+		display: block;
+	}
+}
